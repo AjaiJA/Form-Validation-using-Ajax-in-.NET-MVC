@@ -1,0 +1,17 @@
+﻿* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.ui-datepicker-trigger {
+    width: 35px;
+    margin-left: -36px;
+    cursor: pointer;
+}
+
+.col-10::after {
+    clear: both;
+    content: ' ';
+    display: block;
+}

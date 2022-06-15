@@ -1,0 +1,67 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+<!--
+<div class="jumbotron">
+    <h1>ASP.NET</h1>
+    <p class="lead">ASP.NET is a free web framework for building great Web sites and Web applications using HTML, CSS and JavaScript.</p>
+</div>-->
+<div class="px-3 py-2" style="background:rgb(234, 234, 234);">
+    <div class="row" style="background: rgb(245, 245, 245);">
+        <div class="col-md-6" style="border-right: 1px solid rgb(222, 213, 213);">
+            <img style="width:95%;" src="https://png.pngtree.com/png-vector/20200518/ourlarge/pngtree-girls-learn-at-the-study-desk-online-png-image_2207830.jpg" alt="Student Image">
+        </div>
+        <div class="col-md-6">
+            <h3 class="lh-lg" style="font-style:italic;font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">Enter Student Details</h3>
+            <button type="button" class="btn btn-primary" id="liveToastBtn" style="display:none;"></button>
+            <div class="position-fixed bottom-0 end-0 p-3" style="z-index: 11">
+                <div id="liveToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+                    <div class="toast-header">
+                        <img width="50" src="~/images/check.png" class="rounded me-2" alt="Data Added">
+                        <strong class="me-auto">Success</strong>
+                        <small>Just Now</small>
+                        <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+                    </div>
+                    <div class="toast-body">
+                        Student Data Added Successfully.
+                    </div>
+                </div>
+            </div>
+            <form class="row px-4">
+                <div class="col-md-12 my-3">
+                    <label for="StudentNameInput" class="form-label">Name</label>
+                    <input type="text" class="form-control" id="StudentNameInput" name="StudentName" placeholder="Enter the name of the student" value="" />
+                    <div></div>
+                </div>
+                <br>
+                <div class="col-md-12 my-3">
+                    <label for="StudentEmailInput" class="form-label">Email</label>
+                    <input type="email" class="form-control" id="StudentEmailInput" name="StudentEmail" placeholder="name@example.com" value="" />
+                    <div></div>
+                </div>
+                <br>
+                <div class="col-md-6 my-3">
+                    <label for="DateOfBirthPickerInput" class="form-label">Date of Birth</label>
+                    <div title="dd-mm-yyyy" class="d-flex">
+                        <input type="text" class="form-control" id="DateOfBirthPickerInput" name="DateOfBirth" aria-describedby="DateOfBirthPickerFeedback" placeholder="Date of Birth" readonly>
+                    </div>
+                    <div id="DateOfBirthPickerFeedback"></div>
+                </div>
+                <div class="col-md-6 my-3">
+                    <label for="StudentAgeInput" class="form-label">Age</label>
+                    <input type="number" class="form-control" id="StudentAgeInput" min="0" max="35" aria-describedby="StudentAgeFeedback" name="StudentAge" />
+                    <div id="StudentAgeFeedback"></div>
+                </div>
+                <div class="col-12 d-flex justify-content-between">
+                    <button class="btn btn-danger my-5 clear-btn" type="button">Reset</button>
+                    <button disabled class="btn btn-success my-5 add-student-btn" type="submit">Add Students</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div><br /><br />
+<div class="student-details">
+    <h3 style="line-height: 30px; font-family: 'Titillium Web', sans-serif;" class="text-center">Students Data</h3>
+    <table id="table"></table>
+</div>
+<br /><br />
